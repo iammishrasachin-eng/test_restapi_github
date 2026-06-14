@@ -1,0 +1,15 @@
+image: atlassian/default-image:3
+
+pipelines:
+  default:
+    - step:
+        name: Mirror Bitbucket to GitHub
+        script:
+          - git config --global user.name "Bitbucket Pipeline"
+          - git config --global user.email "pipeline@bitbucket.org"
+
+          # GitHub remote add
+          - git remote add github https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}.git
+
+          # Push Bitbucket master branch to GitHub master
+          - git push https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/${GITHUB_USERNAME}/${GITHUB_REPO}.git master --force
