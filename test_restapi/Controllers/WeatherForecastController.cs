@@ -29,5 +29,11 @@ namespace test_restapi.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("GetName")]
+        public string GetName()
+        {
+            return "Cardinal Technology Sol";
+        }
     }
 }
