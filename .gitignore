@@ -48,3 +48,8 @@ Thumbs.db
 *.mov
 *.wmv
 
+/.vs
+/test_restapi/.vs/test_restapi
+/test_restapi/bin
+/test_restapi/obj
+/test_restapi/Properties
