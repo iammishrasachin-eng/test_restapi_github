@@ -35,6 +35,12 @@ namespace test_restapi.Controllers
         {
             return "Cardinal Technology Sol";
         }
+
+        [HttpGet("GetEmpName")]
+        public string GetEmpName()
+        {
+            return "Good employee";
+        }
     }
 
 
