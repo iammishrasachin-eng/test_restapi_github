@@ -41,6 +41,12 @@ namespace test_restapi.Controllers
         {
             return "Good employee";
         }
+
+        [HttpGet("GetEmpName1")]
+        public string GetEmpName1()
+        {
+            return "Good employee";
+        }
     }
 
 
